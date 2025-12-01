@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+/* index.css */
+:root {
+  --nav-height-sm: 64px;
+  --nav-height-md: 96px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-avatarPulse, .animate-pulseRing, .blobFloat {
+    animation: none !important;
+  }
+}
+
+/* Active link underline transition improvement */
+.nav-active-underline {
+  transform: scaleX(1);
+}
+.nav-underline {
+  transform: scaleX(0);
+}
